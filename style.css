@@ -1,0 +1,59 @@
+/* Define box-sizing e fonte padrão do projeto */
+body { 
+  box-sizing: border-box; 
+  font-family: 'Inter', sans-serif; /* fonte importada em index.html */
+}
+
+
+
+/* Estiliza blocos de código exibidos nas seções */
+.code-block { 
+  background: #2d3748; /* cor escura para contraste como no tema Prism */
+  border-radius: 8px; 
+  padding: 1rem; 
+  margin: 1rem 0; 
+}
+
+
+
+/* Estilo para demos interativas (fundo colorido e texto claro) */
+.interactive-demo { 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+  border-radius: 12px; 
+  padding: 1.5rem; 
+  color: white; 
+}
+
+
+
+/* Efeito hover nos itens de navegação (sidebar) */
+.nav-item:hover { 
+  background: rgba(0, 123, 255, 0.1); 
+  transform: translateX(4px); 
+  transition: all 0.3s ease; 
+}
+
+
+
+/* Cartões de seção: fundo branco, borda arredondada e sombra */
+.section-card { 
+  background: white; 
+  border-radius: 16px; 
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+
+/* Pequeno lift effect ao passar o mouse sobre os cartões */
+.section-card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12); 
+}
+
+
+
+/* Classe usada no header do sidebar para aplicar gradiente */
+.gradient-bg { 
+  background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%); 
+}

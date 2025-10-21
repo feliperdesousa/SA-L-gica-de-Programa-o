@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <!-- Metadados essenciais -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Interativo de Lógica de Programação com JavaScript</title>
+
+  <!-- Tailwind CSS via CDN (gera utilitários CSS) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonte usada no projeto -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tema do Prism (highlight de código mostrado nas seções) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+  <!-- Estilos customizados do projeto -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Núcleo do Prism e plugin autoloader para highlight de linguagens -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+<body class="h-full bg-gray-50">
+  <div class="flex h-full">
+    
+    
+    <!-- Sidebar: navegação principal do guia -->
+    <nav class="w-80 bg-white shadow-lg overflow-y-auto">
+      <!-- Cabeçalho do sidebar com gradiente -->
+      <div class="p-6 gradient-bg text-white">
+        <h1 class="text-xl font-bold">📚 Guia JavaScript</h1>
+        <p class="text-blue-100 text-sm mt-2">Lógica de Programação</p>
+      </div>
+
+
+
+      <!-- Itens de navegação.
+           Cada item chama showSection(id, event) em script.js para mostrar a seção correspondente -->
+      <div class="p-4">
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 font-medium text-gray-700" onclick="showSection('home', event)">🏠 Início</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('variaveis', event)">📦 Variáveis e Tipos de Dados</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('arrays', event)">📋 Arrays</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('operadores-matematicos', event)">➕ Operadores Matemáticos</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('operadores-relacionais', event)">⚖️ Operadores Relacionais</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('operadores-logicos', event)">🔗 Operadores Lógicos</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('if-else', event)">🔀 Estruturas Condicionais (If/Else)</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('switch-case', event)">🎯 Estrutura Switch/Case</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('while', event)">🔄 Estrutura de Repetição While</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('for', event)">🔁 Estrutura de Repetição For</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('do-while', event)">🔃 Estrutura de Repetição Do While</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('foreach', event)">🔂 Estrutura de Repetição ForEach</div>
+        <div class="nav-item p-3 rounded-lg cursor-pointer mb-2 text-gray-600" onclick="showSection('funcoes', event)">⚙️ Funções em JavaScript</div>
+      </div>
+    </nav>
+
+
+
+    <!-- Conteúdo principal: cada seção tem id correspondente aos itens do sidebar -->
+    <main class="flex-1 overflow-y-auto">
+      <!-- HOME -->
+      <section id="home" class="section p-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl font-bold text-gray-800 mb-6">Guia Interativo de Lógica de Programação</h1>
+          <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Aprenda os fundamentos da lógica de programação com exemplos práticos em JavaScript.</p>
+          <!-- Botão que abre a seção "variaveis" -->
+          <button onclick="showSection('variaveis', event)" class="gradient-bg text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">🚀 Começar o Guia</button>
+        </div>
+      </section>
+
+
+
+      <!-- VARIÁVEIS -->
+      <section id="variaveis" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">📦 Variáveis e Tipos de Dados</h2>
+
+          <!-- Cartão de explicação (estilizado pelo style.css) -->
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Variáveis armazenam dados. Em JavaScript, usamos <code>let</code>, <code>const</code> ou <code>var</code>.
+            </p>
+          </div>
+
+          <!-- Bloco de código com destaque (Prism) -->
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+let nome = "João";
+let idade = 25;
+const ativo = true;
+console.log(nome, idade, ativo);
+              </code></pre>
+            </div>
+          </div>
+
+          <!-- Demo interativa: inputs ligados a funções em script.js -->
+          <div class="interactive-demo">
+            <h3 class="text-2xl font-semibold mb-4">🎮 Exemplo Interativo</h3>
+            <input id="inputNome" placeholder="Nome" class="w-full p-3 rounded-lg text-gray-800 mb-3">
+            <input id="inputIdade" type="number" placeholder="Idade" class="w-full p-3 rounded-lg text-gray-800 mb-3">
+            <!-- Chama processarVariaveis() em script.js -->
+            <button onclick="processarVariaveis()" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 mb-3">Processar</button>
+            <div id="resultadoVariaveis" class="bg-black bg-opacity-20 p-4 rounded-lg font-mono text-sm">Resultado aparecerá aqui</div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- ARRAYS -->
+      <section id="arrays" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">📋 Arrays</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Arrays armazenam múltiplos valores em uma lista indexada.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+let frutas = ["maçã","banana","laranja"];
+frutas.push("uva");
+console.log(frutas);
+              </code></pre></div>
+          </div>
+
+          <!-- Inputs e botões que chamam adicionarFruta, removerFruta e limparArray em script.js -->
+          <div class="interactive-demo">
+            <h3 class="text-2xl font-semibold mb-4">🎮 Manipulação de Arrays</h3>
+            <input id="inputFruta" placeholder="Nova fruta" class="w-full p-3 rounded-lg text-gray-800 mb-3">
+            <button onclick="adicionarFruta()" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 mb-2">Adicionar</button>
+            <button onclick="removerFruta()" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 mb-2">Remover último</button>
+            <button onclick="limparArray()" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 mb-2">Limpar tudo</button>
+            <div class="bg-black bg-opacity-20 p-4 rounded-lg mt-4">
+              <p>Array Atual:</p>
+              <pre id="arrayFrutas" class="font-mono text-sm"></pre>
+              <p>Tamanho: <span id="tamanhoArray"></span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- OPERADORES MATEMATIVOS -->
+      <section id="operadores-matematicos" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">➕ Operadores Matemáticos</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Realizam cálculos: <code>+, -, *, /, %, **</code>.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+let a = 10, b = 3;
+console.log(a + b, a - b, a * b, a / b, a % b, a ** b);
+              </code></pre></div>
+          </div>
+          <div class="interactive-demo">
+            <h3 class="text-2xl font-semibold mb-4">🎮 Calculadora</h3>
+            <input id="num1" type="number" placeholder="Número 1" class="w-full p-3 rounded-lg text-gray-800 mb-3">
+            <input id="num2" type="number" placeholder="Número 2" class="w-full p-3 rounded-lg text-gray-800 mb-3">
+            <!-- Chama calcular() em script.js -->
+            <button onclick="calcular()" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 mb-3">Calcular</button>
+            <div id="resultadosCalculo" class="bg-black bg-opacity-20 p-4 rounded-lg font-mono text-sm">Resultado aparecerá aqui</div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- OPERADORES RELACIONAIS -->
+      <section id="operadores-relacionais" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">⚖️ Operadores Relacionais</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Comparam valores: <code>==, ===, !=, !==, &gt;, &lt;, &gt;=, &lt;=</code>.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">let x = 10, y = 5;
+console.log(x > y);  // true
+console.log(x === y); // false
+console.log(x != y);  // true
+            </code></pre></div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- OPERADORES LÓGICOS -->
+      <section id="operadores-logicos" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">🔗 Operadores Lógicos</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Combinam condições: <code>&& (E), || (OU), ! (NÃO)</code>.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+let idade = 20;
+let possuiCarteira = true;
+if (idade >= 18 && possuiCarteira) {
+  console.log("Pode dirigir"); 
+} else { console.log("Não pode dirigir");
+}
+console.log(!possuiCarteira); // false
+              </code></pre></div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- IF/ELSE -->
+      <section id="if-else" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">🔀 Estruturas Condicionais (If/Else)</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Executa blocos com base em condições.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">let idade = 18;
+if(idade >= 18){ console.log("Maior de idade");
+} else { console.log("Menor de idade");
+}
+              </code></pre></div>
+          </div>
+          <div class="interactive-demo">
+            <h3 class="text-2xl font-semibold mb-4">🎮 Teste Interativo</h3>
+            <input id="idadeIf" type="number" placeholder="Digite a idade" class="w-full p-3 rounded-lg text-gray-800 mb-3">
+            <button onclick="testarIfElse()" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 mb-3">Verificar</button>
+            <div id="resultadoIfElse" class="bg-black bg-opacity-20 p-4 rounded-lg font-mono text-sm">Resultado aparecerá aqui</div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- SWITCH/CASE -->
+      <section id="switch-case" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">🎯 Estrutura Switch/Case</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Permite testar múltiplos casos de uma variável.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+let dia = 3;
+switch(dia){
+  case 1: console.log("Domingo"); break;
+  case 2: console.log("Segunda"); break;
+  case 3: console.log("Terça"); break;
+  default: console.log("Outro dia"); }
+              </code></pre></div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- WHILE -->
+      <section id="while" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">🔄 Estrutura de Repetição While</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Executa um bloco enquanto a condição for verdadeira.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+let i = 0;
+while(i < 5){
+  console.log(i);
+  i++;
+}
+              </code></pre></div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- FOR -->
+      <section id="for" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">🔁 Estrutura de Repetição For</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Executa um bloco um número definido de vezes.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+for(let i=0;i<5;i++){
+  console.log(i);
+}
+              </code></pre></div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- DO WHILE -->
+      <section id="do-while" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">🔃 Estrutura de Repetição Do While</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Executa o bloco pelo menos uma vez e repete enquanto a condição for verdadeira.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+let i=0;
+do{
+  console.log(i);
+  i++;
+} while(i<5);
+              </code></pre></div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- FOREACH -->
+      <section id="foreach" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">🔂 Estrutura de Repetição ForEach</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Itera sobre cada elemento de um array.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+let numeros=[1,2,3];
+numeros.forEach(n=>console.log(n));
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- FUNÇÕES -->
+      <section id="funcoes" class="section p-8 hidden">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">⚙️ Funções em JavaScript</h2>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Funções encapsulam blocos de código reutilizáveis.
+            </p>
+          </div>
+          <div class="section-card p-8 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
+            <div class="code-block">
+              <pre><code class="language-javascript">
+function saudacao(nome){
+  return "Olá, "+nome+"!";
+}
+console.log(saudacao("João"));
+              </code></pre>
+            </div>
+          </div>
+          <div class="interactive-demo">
+            <h3 class="text-2xl font-semibold mb-4">🎮 Teste Interativo</h3>
+            <input id="nomeFuncao" placeholder="Digite seu nome" class="w-full p-3 rounded-lg text-gray-800 mb-3">
+            <button onclick="executarFuncao()" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 mb-3">Executar Função</button>
+            <div id="resultadoFuncao" class="bg-black bg-opacity-20 p-4 rounded-lg font-mono text-sm">Resultado aparecerá aqui</div>
+          </div>
+        </div>
+      </section>
+
+
+      
+      <!-- FOOTER: créditos do projeto -->
+      <footer class="bg-gray-800 text-white p-8 mt-12">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-lg mb-2">Projeto desenvolvido por estudantes do curso Técnico em Desenvolvimento de Sistemas</p>
+          <p class="text-gray-400 mb-2">SESI SENAI SC</p>
+          <p class="text-gray-400">Docente: Felipe Ricardo de Sousa e Nicolas Osvaldo Soares</p>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Script principal que controla interação (script.js) -->
+  <script src="script.js"></script>
+</body>
+</html>
