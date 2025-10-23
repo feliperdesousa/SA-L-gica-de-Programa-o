@@ -24,8 +24,6 @@
 </head>
 <body class="h-full bg-gray-50">
   <div class="flex h-full">
-    
-    
     <!-- Sidebar: navegação principal do guia -->
     <nav class="w-80 bg-white shadow-lg overflow-y-auto">
       <!-- Cabeçalho do sidebar com gradiente -->
@@ -33,8 +31,6 @@
         <h1 class="text-xl font-bold">📚 Guia JavaScript</h1>
         <p class="text-blue-100 text-sm mt-2">Lógica de Programação</p>
       </div>
-
-
 
       <!-- Itens de navegação.
            Cada item chama showSection(id, event) em script.js para mostrar a seção correspondente -->
@@ -55,8 +51,6 @@
       </div>
     </nav>
 
-
-
     <!-- Conteúdo principal: cada seção tem id correspondente aos itens do sidebar -->
     <main class="flex-1 overflow-y-auto">
       <!-- HOME -->
@@ -69,8 +63,6 @@
         </div>
       </section>
 
-
-
       <!-- VARIÁVEIS -->
       <section id="variaveis" class="section p-8 hidden">
         <div class="max-w-4xl mx-auto">
@@ -80,21 +72,18 @@
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Variáveis armazenam dados. Em JavaScript, usamos <code>let</code>, <code>const</code> ou <code>var</code>.
+              Variáveis armazenam dados em memória e permitem nomear valores para uso posterior. Em JavaScript usamos let (variável mutável), const (valor fixo/imutável) e var (escopo de função — pouco usado atualmente). Tipos comuns: string (texto), number (números), boolean (verdadeiro/falso), null, undefined e objetos/arrays para estruturas mais complexas.
             </p>
           </div>
 
           <!-- Bloco de código com destaque (Prism) -->
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-let nome = "João";
+            <div class="code-block"><pre><code class="language-javascript">let nome = "João";
 let idade = 25;
 const ativo = true;
-console.log(nome, idade, ativo);
-              </code></pre>
-            </div>
+console.log(nome, idade, ativo);</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: declara duas variáveis (nome e idade) e uma constante (ativo). Em seguida imprime esses valores no console. Serve para demonstrar declaração, atribuição e exibição de valores.</p>
           </div>
 
           <!-- Demo interativa: inputs ligados a funções em script.js -->
@@ -109,8 +98,6 @@ console.log(nome, idade, ativo);
         </div>
       </section>
 
-
-
       <!-- ARRAYS -->
       <section id="arrays" class="section p-8 hidden">
         <div class="max-w-4xl mx-auto">
@@ -118,17 +105,15 @@ console.log(nome, idade, ativo);
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Arrays armazenam múltiplos valores em uma lista indexada.
+              Arrays são listas ordenadas que armazenam múltiplos valores acessíveis por índice (começando em 0). Permitem operações como adicionar, remover, iterar e transformar elementos. Úteis para coleções de dados, filas, pilhas e tabelas simples.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-let frutas = ["maçã","banana","laranja"];
+            <div class="code-block"><pre><code class="language-javascript">let frutas = ["maçã","banana","laranja"];
 frutas.push("uva");
-console.log(frutas);
-              </code></pre></div>
+console.log(frutas);</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: cria um array com três strings, usa push para adicionar "uva" ao final e imprime o array atualizado. Demonstra criação, modificação e exibição de arrays.</p>
           </div>
 
           <!-- Inputs e botões que chamam adicionarFruta, removerFruta e limparArray em script.js -->
@@ -147,8 +132,6 @@ console.log(frutas);
         </div>
       </section>
 
-
-
       <!-- OPERADORES MATEMATIVOS -->
       <section id="operadores-matematicos" class="section p-8 hidden">
         <div class="max-w-4xl mx-auto">
@@ -156,16 +139,14 @@ console.log(frutas);
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Realizam cálculos: <code>+, -, *, /, %, **</code>.
+              Operadores matemáticos realizam cálculos básicos e avançados: + (adição), - (subtração), * (multiplicação), / (divisão), % (resto da divisão) e ** (exponenciação). Combine-os com variáveis para expressar algoritmos e fórmulas.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-let a = 10, b = 3;
-console.log(a + b, a - b, a * b, a / b, a % b, a ** b);
-              </code></pre></div>
+            <div class="code-block"><pre><code class="language-javascript">let a = 10, b = 3;
+console.log(a + b, a - b, a * b, a / b, a % b, a ** b);</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: define dois números e imprime os resultados de soma, subtração, multiplicação, divisão, resto e potência. Útil para ver o efeito de cada operador.</p>
           </div>
           <div class="interactive-demo">
             <h3 class="text-2xl font-semibold mb-4">🎮 Calculadora</h3>
@@ -178,8 +159,6 @@ console.log(a + b, a - b, a * b, a / b, a % b, a ** b);
         </div>
       </section>
 
-
-
       <!-- OPERADORES RELACIONAIS -->
       <section id="operadores-relacionais" class="section p-8 hidden">
         <div class="max-w-4xl mx-auto">
@@ -187,22 +166,19 @@ console.log(a + b, a - b, a * b, a / b, a % b, a ** b);
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Comparam valores: <code>==, ===, !=, !==, &gt;, &lt;, &gt;=, &lt;=</code>.
+              Operadores relacionais comparam valores e retornam booleanos. Use ==/!= para comparação flexível, ===/!== para comparação estrita (tipo + valor), e >, <, >=, <= para comparações numéricas ou alfabéticas. Essenciais para decisões e filtros.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">let x = 10, y = 5;
+            <div class="code-block"><pre><code class="language-javascript">let x = 10, y = 5;
 console.log(x > y);  // true
 console.log(x === y); // false
-console.log(x != y);  // true
-            </code></pre></div>
+console.log(x != y);  // true</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: compara dois números e imprime resultados booleanos para maior que, igualdade estrita e desigualdade. Ajuda a entender como cada operador avalia os valores.</p>
           </div>
         </div>
       </section>
-
-
 
       <!-- OPERADORES LÓGICOS -->
       <section id="operadores-logicos" class="section p-8 hidden">
@@ -211,26 +187,20 @@ console.log(x != y);  // true
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Combinam condições: <code>&& (E), || (OU), ! (NÃO)</code>.
+              Operadores lógicos combinam expressões booleanas: && (E) retorna true se ambos forem true; || (OU) retorna true se ao menos um for true; ! (NÃO) inverte o valor booleano. Usados para compor condições mais complexas.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-let idade = 20;
+            <div class="code-block"><pre><code class="language-javascript">let idade = 20;
 let possuiCarteira = true;
-if (idade >= 18 && possuiCarteira) {
-  console.log("Pode dirigir"); 
-} else { console.log("Não pode dirigir");
-}
-console.log(!possuiCarteira); // false
-              </code></pre></div>
+if (idade >= 18 && possuiCarteira) { console.log("Pode dirigir"); } 
+else { console.log("Não pode dirigir"); }
+console.log(!possuiCarteira); // false</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: verifica se a pessoa tem idade suficiente e carteira (operador &&) para decidir se pode dirigir, e usa ! para inverter o valor de possuiCarteira. Demonstra combinação e negação de condições.</p>
           </div>
         </div>
       </section>
-
-
 
       <!-- IF/ELSE -->
       <section id="if-else" class="section p-8 hidden">
@@ -239,17 +209,15 @@ console.log(!possuiCarteira); // false
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Executa blocos com base em condições.
+              If/else permite executar blocos diferentes dependendo do resultado de uma condição booleana. Combine if, else if e else para tratar múltiplos caminhos. São fundamentais para controlar fluxo e reagir a dados.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">let idade = 18;
-if(idade >= 18){ console.log("Maior de idade");
-} else { console.log("Menor de idade");
-}
-              </code></pre></div>
+            <div class="code-block"><pre><code class="language-javascript">let idade = 18;
+if(idade >= 18){ console.log("Maior de idade"); }
+else { console.log("Menor de idade"); }</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: testa se a variável idade é maior ou igual a 18. Se for, imprime "Maior de idade", caso contrário imprime "Menor de idade". Demonstra decisão binária.</p>
           </div>
           <div class="interactive-demo">
             <h3 class="text-2xl font-semibold mb-4">🎮 Teste Interativo</h3>
@@ -260,8 +228,6 @@ if(idade >= 18){ console.log("Maior de idade");
         </div>
       </section>
 
-
-
       <!-- SWITCH/CASE -->
       <section id="switch-case" class="section p-8 hidden">
         <div class="max-w-4xl mx-auto">
@@ -269,25 +235,21 @@ if(idade >= 18){ console.log("Maior de idade");
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Permite testar múltiplos casos de uma variável.
+              Switch/case é útil para testar uma mesma expressão contra múltiplos valores (casos) de forma legível. Cada case é testado sequencialmente até encontrar uma correspondência; use break para evitar execução contínua.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-let dia = 3;
+            <div class="code-block"><pre><code class="language-javascript">let dia = 3;
 switch(dia){
   case 1: console.log("Domingo"); break;
   case 2: console.log("Segunda"); break;
   case 3: console.log("Terça"); break;
-  default: console.log("Outro dia"); }
-              </code></pre></div>
+  default: console.log("Outro dia"); }</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: avalia a variável dia e executa o bloco correspondente ao case igual a 3, imprimindo "Terça". Se nenhum case corresponder, executa default. Mostra como mapear valores para ações.</p>
           </div>
         </div>
       </section>
-
-
 
       <!-- WHILE -->
       <section id="while" class="section p-8 hidden">
@@ -296,24 +258,20 @@ switch(dia){
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Executa um bloco enquanto a condição for verdadeira.
+              while repete um bloco enquanto uma condição for verdadeira. Use quando o número de iterações não é conhecido antecipadamente. Evite loops infinitos garantindo que a condição possa se tornar falsa.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-let i = 0;
+            <div class="code-block"><pre><code class="language-javascript">let i = 0;
 while(i < 5){
   console.log(i);
   i++;
-}
-              </code></pre></div>
+}</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: inicia i em 0 e imprime valores de 0 a 4, incrementando i a cada iteração. Demonstra controle de repetição com condição de parada.</p>
           </div>
         </div>
       </section>
-
-
 
       <!-- FOR -->
       <section id="for" class="section p-8 hidden">
@@ -322,22 +280,18 @@ while(i < 5){
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Executa um bloco um número definido de vezes.
+              for é ideal quando se conhece o número de repetições. Possui inicialização, condição e incremento, tudo na mesma linha, tornando-o compacto para percorrer índices ou executar tarefas repetidas.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-for(let i=0;i<5;i++){
+            <div class="code-block"><pre><code class="language-javascript">for(let i=0;i<5;i++){
   console.log(i);
-}
-              </code></pre></div>
+}</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: repete um bloco 5 vezes, imprimindo os valores de 0 a 4. Mostra a estrutura típica de inicialização, condição e incremento do for.</p>
           </div>
         </div>
       </section>
-
-
 
       <!-- DO WHILE -->
       <section id="do-while" class="section p-8 hidden">
@@ -346,24 +300,20 @@ for(let i=0;i<5;i++){
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Executa o bloco pelo menos uma vez e repete enquanto a condição for verdadeira.
+              do/while executa o bloco pelo menos uma vez e depois verifica a condição para repetir. Útil quando é necessário que o código execute antes de avaliar a condição (por exemplo, ler entrada do usuário).
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-let i=0;
+            <div class="code-block"><pre><code class="language-javascript">let i=0;
 do{
   console.log(i);
   i++;
-} while(i<5);
-              </code></pre></div>
+}while(i<5);</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: imprime os números de 0 a 4 garantindo que o bloco rode pelo menos uma vez antes de verificar a condição.</p>
           </div>
         </div>
       </section>
-
-
 
       <!-- FOREACH -->
       <section id="foreach" class="section p-8 hidden">
@@ -372,22 +322,17 @@ do{
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Itera sobre cada elemento de um array.
+              forEach é um método de array que executa uma função para cada elemento. É ideal para iterações simples quando não se precisa de um índice explícito ou de interromper o loop (não suporta break).
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-let numeros=[1,2,3];
-numeros.forEach(n=>console.log(n));
-              </code></pre>
-            </div>
+            <div class="code-block"><pre><code class="language-javascript">let numeros=[1,2,3];
+numeros.forEach(n=>console.log(n));</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: percorre o array numeros e imprime cada elemento usando uma arrow function. Mostra iteração simples sem manipular índices.</p>
           </div>
         </div>
       </section>
-
-
 
       <!-- FUNÇÕES -->
       <section id="funcoes" class="section p-8 hidden">
@@ -396,19 +341,16 @@ numeros.forEach(n=>console.log(n));
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Explicação</h3>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Funções encapsulam blocos de código reutilizáveis.
+              Funções encapsulam lógica reutilizável; podem receber parâmetros e retornar valores. Existem declarações tradicionais, expressões de função e arrow functions. Boas funções têm responsabilidade única e nomes descritivos.
             </p>
           </div>
           <div class="section-card p-8 mb-8">
             <h3 class="text-2xl font-semibold mb-4">Exemplo de Código</h3>
-            <div class="code-block">
-              <pre><code class="language-javascript">
-function saudacao(nome){
+            <div class="code-block"><pre><code class="language-javascript">function saudacao(nome){
   return "Olá, "+nome+"!";
 }
-console.log(saudacao("João"));
-              </code></pre>
-            </div>
+console.log(saudacao("João"));</code></pre></div>
+            <p class="text-gray-600 mt-3">O que esse código faz: define uma função que recebe um nome e retorna uma saudação. Em seguida chama a função com "João" e imprime a mensagem. Demonstra entrada, processamento e retorno.</p>
           </div>
           <div class="interactive-demo">
             <h3 class="text-2xl font-semibold mb-4">🎮 Teste Interativo</h3>
@@ -419,8 +361,6 @@ console.log(saudacao("João"));
         </div>
       </section>
 
-
-      
       <!-- FOOTER: créditos do projeto -->
       <footer class="bg-gray-800 text-white p-8 mt-12">
         <div class="max-w-4xl mx-auto text-center">

@@ -1,8 +1,6 @@
 // Array global usado na seção "Arrays" para armazenar frutas
 let frutasArray = ["maçã","banana","laranja"];
 
-
-
 /* showSection(sectionId, event)
    - Fecha todas as seções (adiciona classe 'hidden') e mostra a seção com id = sectionId
    - Atualiza o estilo do item de navegação clicado (marca como ativo)
@@ -20,9 +18,6 @@ function showSection(sectionId,event){
   event.target.classList.add('bg-blue-100','text-blue-700','font-semibold');
 }
 
-
-
-
 /* processarVariaveis()
    - Lê valores dos inputs da seção "Variáveis" e escreve uma string resumo no elemento resultadoVariaveis
    - Usa typeof para mostrar o tipo do valor (exibe número como string se input em branco) */
@@ -31,9 +26,6 @@ function processarVariaveis(){
   const idade=document.getElementById('inputIdade').value||"Não informado";
   document.getElementById('resultadoVariaveis').textContent=`Nome: ${nome} (${typeof nome})\nIdade: ${idade} (${typeof (idade?Number(idade):idade)})`;
 }
-
-
-
 
 /* Funções de manipulação do array de frutas:
    - adicionarFruta: adiciona valor do input ao array e atualiza a visualização
@@ -63,9 +55,6 @@ function atualizarArrayDisplay(){
   document.getElementById('tamanhoArray').textContent=frutasArray.length;
 }
 
-
-
-
 /* calcular()
    - Lê dois números, realiza operações básicas (+ - * / % **) e coloca o resultado no elemento resultadosCalculo
    - Trata divisão e módulo por zero exibindo 'Erro' quando aplicável */
@@ -76,9 +65,6 @@ function calcular(){
   document.getElementById('resultadosCalculo').textContent=res;
 }
 
-
-
-
 /* testarIfElse()
    - Lê a idade do input e escreve "Maior de idade" ou "Menor de idade" no resultado correspondente */
 function testarIfElse(){
@@ -87,9 +73,6 @@ function testarIfElse(){
   document.getElementById('resultadoIfElse').textContent=resultado;
 }
 
-
-
-
 /* executarFuncao()
    - Lê nome, aplica uma função de saudação simples e exibe o resultado na seção Funções */
 function executarFuncao(){
@@ -97,9 +80,6 @@ function executarFuncao(){
   const saudacao=(n)=>`Olá, ${n}!`; // função interna de exemplo
   document.getElementById('resultadoFuncao').textContent=saudacao(nome);
 }
-
-
-
 
 /* Listener DOMContentLoaded
    - Marca o primeiro item de navegação como ativo ao carregar a página

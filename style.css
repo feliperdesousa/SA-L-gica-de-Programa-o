@@ -4,8 +4,6 @@ body {
   font-family: 'Inter', sans-serif; /* fonte importada em index.html */
 }
 
-
-
 /* Estiliza blocos de código exibidos nas seções */
 .code-block { 
   background: #2d3748; /* cor escura para contraste como no tema Prism */
@@ -13,8 +11,6 @@ body {
   padding: 1rem; 
   margin: 1rem 0; 
 }
-
-
 
 /* Estilo para demos interativas (fundo colorido e texto claro) */
 .interactive-demo { 
@@ -24,16 +20,12 @@ body {
   color: white; 
 }
 
-
-
 /* Efeito hover nos itens de navegação (sidebar) */
 .nav-item:hover { 
   background: rgba(0, 123, 255, 0.1); 
   transform: translateX(4px); 
   transition: all 0.3s ease; 
 }
-
-
 
 /* Cartões de seção: fundo branco, borda arredondada e sombra */
 .section-card { 
@@ -43,15 +35,11 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-
-
 /* Pequeno lift effect ao passar o mouse sobre os cartões */
 .section-card:hover { 
   transform: translateY(-4px); 
   box-shadow: 0 8px 30px rgba(0,0,0,0.12); 
 }
-
-
 
 /* Classe usada no header do sidebar para aplicar gradiente */
 .gradient-bg { 
